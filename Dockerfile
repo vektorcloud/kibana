@@ -1,4 +1,4 @@
-FROM quay.io/vektorcloud/base:latest
+FROM quay.io/vektorcloud/base:3.4
 
 ENV KIBANA_VERSION 4.4.1
 
