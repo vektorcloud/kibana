@@ -5,7 +5,7 @@ es_hostvars="ES_HOST ELASTIC_URI"
 for var in $es_hostvars; do
   [ ! -z "${!var}" ] && {
     ES_HOST=${!var}
-    echo "configuring elastic host from env var $var ($ES_HOST)"
+    echo "configuring elastic host from env var $var [$ES_HOST]"
     break
   }
 done
@@ -15,8 +15,10 @@ done
   exit 1
 }
 
+[[ $ES_HOST =~ http://* ]] || ES_HOST=http://${ES_HOST}
+
 echo "server.host: 0.0.0.0" >> /kibana/config/kibana.yml
-echo "elasticsearch.url: \"http://${ES_HOST}\"" >> /kibana/config/kibana.yml
+echo "elasticsearch.url: \"${ES_HOST}\"" >> /kibana/config/kibana.yml
 
 cd /kibana 
 exec ./bin/kibana
