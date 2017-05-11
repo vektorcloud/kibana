@@ -18,6 +18,7 @@ done
 [[ $ES_HOST =~ http://* ]] || ES_HOST=http://${ES_HOST}
 
 echo "server.host: 0.0.0.0" >> /kibana/config/kibana.yml
+echo "logging.quiet: false" >> /kibana/config/kibana.yml
 echo "elasticsearch.url: \"${ES_HOST}\"" >> /kibana/config/kibana.yml
 
 cd /kibana 
