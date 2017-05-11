@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 es_hostvars="ES_HOST ELASTIC_URI"
 

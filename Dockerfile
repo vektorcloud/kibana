@@ -3,7 +3,7 @@ FROM quay.io/vektorcloud/base:3.5
 ENV KIBANA_VERSION 5.2.0
 ENV KIBANA_FILENAME kibana-${KIBANA_VERSION}-linux-x86_64
 
-RUN apk add --no-cache nodejs openssl && \
+RUN apk add --no-cache nodejs openssl bash && \
     wget -q https://artifacts.elastic.co/downloads/kibana/${KIBANA_FILENAME}.tar.gz && \
     tar zxf ${KIBANA_FILENAME}.tar.gz && mv ${KIBANA_FILENAME} /kibana && \
     rm /kibana/node/bin/node /kibana/node/bin/npm && \
