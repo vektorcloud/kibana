@@ -1,6 +1,6 @@
-FROM quay.io/vektorcloud/base:3.5
+FROM quay.io/vektorcloud/base:3.6
 
-ENV KIBANA_VERSION 5.2.0
+ENV KIBANA_VERSION 5.5.0
 ENV KIBANA_FILENAME kibana-${KIBANA_VERSION}-linux-x86_64
 
 RUN apk add --no-cache nodejs openssl bash && \
