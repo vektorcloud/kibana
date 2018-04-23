@@ -1,10 +1,10 @@
 FROM quay.io/vektorcloud/base:3.7
 
-ENV KIBANA_VERSION 5.5.0
+ENV KIBANA_VERSION 6.2.4
 ENV KIBANA_FILENAME kibana-${KIBANA_VERSION}-linux-x86_64
 
 RUN apk add --no-cache nodejs openssl bash && \
-    wget -q https://artifacts.elastic.co/downloads/kibana/${KIBANA_FILENAME}.tar.gz && \
+    wget https://artifacts.elastic.co/downloads/kibana/${KIBANA_FILENAME}.tar.gz && \
     tar zxf ${KIBANA_FILENAME}.tar.gz && mv ${KIBANA_FILENAME} /kibana && \
     rm /kibana/node/bin/node /kibana/node/bin/npm && \
     ln -s /usr/bin/node /kibana/node/bin/node && \
