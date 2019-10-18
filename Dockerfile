@@ -1,4 +1,4 @@
-FROM quay.io/vektorcloud/base:3.7
+FROM quay.io/vektorcloud/base:3.9
 
 ENV KIBANA_VERSION 6.2.4
 ENV KIBANA_FILENAME kibana-${KIBANA_VERSION}-linux-x86_64
