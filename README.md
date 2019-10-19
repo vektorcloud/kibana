@@ -1,6 +1,6 @@
 # kibana
 
-![circleci][circleci]
+[![circleci][circleci]](https://circleci.com/gh/vektorcloud/kibana)
 
 Alpine-based Kibana image
 
